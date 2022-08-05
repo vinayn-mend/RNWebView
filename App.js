@@ -13,7 +13,6 @@ import WebView from 'react-native-webview';
 import RNPermissions, {PERMISSIONS} from 'react-native-permissions';
 
 const App: () => Node = () => {
-  const [url, setUrl] = useState('https://portal-dev1.mendvip.com/');
   const [granted, setGranted] = useState(false);
   useEffect(() => {
     requestPermissions();
@@ -37,7 +36,7 @@ const App: () => Node = () => {
       {granted && (
         <WebView
           // originWhitelist={['*']}
-          source={{uri: 'https://portal-dev1.mendvip.com/video/MRCPXZ'}} // <--- That url is set here
+          source={{uri: 'https://opentokdemo.tokbox.com/'}} // <--- Change url here
           javaScriptEnabled={true}
           onNavigationStateChange={navigationState => {}}
           allowsInlineMediaPlayback={true}
